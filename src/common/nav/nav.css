@@ -1,0 +1,14 @@
+.main-nav {
+  display: flex;
+  width: 500px;
+  float: right;
+}
+
+.main-nav li:last-child {
+  margin-left: auto;
+}
+
+.main-nav li {
+  height: 45px;
+  width: 100px;
+}

@@ -1,0 +1,33 @@
+{
+  "rootDir": ".",
+  "verbose": true,
+  "transform": {
+    "^.+\\.tsx?$": "ts-jest"
+  },
+  "testEnvironment": "jsdom",
+  "testMatch": ["<rootDir>/src/**/?(*.)+(spec|test).[jt]s?(x)"],
+  "setupFilesAfterEnv": ["@testing-library/jest-dom"],
+  "moduleFileExtensions": ["ts", "tsx", "js", "jsx"],
+  "coverageDirectory": "<rootDir>/coverage",
+  "moduleDirectories": ["node_modules"],
+  "moduleNameMapper": {
+    "\\.css$": "<rootDir>/src/mocks/styleMock.ts",
+    "\\.ico$": "<rootDir>/src/mocks/styleMock.ts",
+    "@components/(.*)$": "<rootDir>/src/components/project-template",
+    "@assets/(.*)$": "<rootDir>/src/assets/project-template"
+  },
+  "coverageThreshold": {
+    "global": {
+      "branches": 80,
+      "functions": 80,
+      "lines": 80,
+      "statements": -10
+    }
+  },
+  "coveragePathIgnorePatterns": ["<rootDir>/coverage", "<rootDir>/src/mocks", "<rootDir>/src/index.tsx?"],
+  "globals": {
+    "test-jest": {
+      "diagnostics": false
+    }
+  }
+}
